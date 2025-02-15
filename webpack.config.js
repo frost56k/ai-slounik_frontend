@@ -8,7 +8,7 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      '/api': 'http://ai-slounik.strangled.net',
+      '/api': 'https://ai-slounik.strangled.net',
     },
     hot: true,
   },

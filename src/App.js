@@ -14,7 +14,7 @@ const App = () => {
         setResponse('');
     
         try {
-            const res = await fetch('http://slounik.andchar.of.by/api/query', {
+            const res = await fetch('https://slounik.andchar.of.by/api/query', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
