@@ -8,6 +8,9 @@ module.exports = {
   },
   devServer: {
     host: 'https://ai-slounik.andchar.of.by/',
+    proxy: {
+      '/api': 'https://ai-slounik.andchar.of.by/',
+    },
     hot: true,
     allowedHosts: 'all',
     historyApiFallback: true,
