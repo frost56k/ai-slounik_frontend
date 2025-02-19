@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { TextField, Button, Paper, Typography, CircularProgress, MenuItem, Select, InputLabel, FormControl } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
 
@@ -17,13 +17,13 @@ const Translation = ({ switchToDictionary }) => {
         { code: 'uk', name: 'Украінская' }
     ];
 
-    const handleTranslate = async () => {
+    const handleTranslate = useCallback(async () => {
         setIsLoading(true);
         setError('');
 
         try {
-            const res = await fetch('https://ai-slounik.andchar.of.by/api/translate', {
-            //const res = await fetch('http://127.0.0.1:5000/api/translate', {
+           const res = await fetch('https://ai-slounik.andchar.of.by/api/translate', {
+         //    const res = await fetch('http://127.0.0.1:5000/api/translate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ const Translation = ({ switchToDictionary }) => {
         } finally {
             setIsLoading(false);
         }
-    };
+    }, [text, targetLang]);
 
     useEffect(() => {
         const handleKeyPress = (event) => {
@@ -59,7 +59,7 @@ const Translation = ({ switchToDictionary }) => {
         return () => {
             window.removeEventListener('keypress', handleKeyPress);
         };
-    }, [text]);
+    }, [text, handleTranslate]);
 
     return (
         <Paper elevation={3} style={{ padding: '20px', marginTop: '20px' }}>
