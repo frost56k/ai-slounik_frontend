@@ -8,10 +8,6 @@ module.exports = {
   },
   devServer: {
     host: 'https://ai-slounik.andchar.of.by/',
-    port: 3000,
-    proxy: {
-      '/api': 'https://ai-slounik.andchar.of.by/',
-    },
     hot: true,
     allowedHosts: 'all',
     historyApiFallback: true,
