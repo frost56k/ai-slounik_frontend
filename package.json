@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "Тлумачальны слоўнік",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +8,8 @@
     "@mui/icons-material": "^6.4.4",
     "@mui/material": "^6.4.4",
     "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "event-source-polyfill": "^1.0.31",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -38,5 +40,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://slounik.andchar.of.by/"
+  "proxy": "http://127.0.0.1:5000/api/query/"
 }
