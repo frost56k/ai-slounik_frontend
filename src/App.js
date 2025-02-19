@@ -18,7 +18,8 @@ const App = () => {
 
     
         try {
-            const res = await fetch('http://127.0.0.1:5000/api/query', {
+            const res = await fetch('https://ai-slounik.andchar.of.by/api/query', {
+               // const res = await fetch('http://127.0.0.1:5000/api/query', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',  // Убедитесь, что этот заголовок присутствует
