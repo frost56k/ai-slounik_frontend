@@ -24,7 +24,7 @@ const Translation = ({ switchToDictionary }) => {
         try {
            const res = await fetch('https://ai-slounik.andchar.of.by/api/translate', {
          //    const res = await fetch('http://127.0.0.1:5000/api/translate', {
-                method: 'POST',
+                method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
                 },

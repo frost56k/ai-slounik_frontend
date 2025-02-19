@@ -7,10 +7,10 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
-    host: '127.0.0.1',
+    host: 'https://ai-slounik.andchar.of.by/',
     port: 3000,
     proxy: {
-      '/api': 'http://127.0.0.1:5000',
+      '/api': 'https://ai-slounik.andchar.of.by/',
     },
     hot: true,
     allowedHosts: 'all',

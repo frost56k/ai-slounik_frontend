@@ -25,7 +25,7 @@ const App = () => {
         try {
             const res = await fetch('https://ai-slounik.andchar.of.by/api/query', {
         // const res = await fetch('http://127.0.0.1:5000/api/query', {
-                method: 'POST',
+                method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
                 },
